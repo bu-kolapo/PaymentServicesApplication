@@ -48,6 +48,24 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.paymentservices</groupId>
+            <artifactId>common-lib</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- Spring WebFlux for WebFilter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <!-- Spring Data Mongo Reactive -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

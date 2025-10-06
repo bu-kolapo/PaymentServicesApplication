@@ -14,4 +14,8 @@ public interface PaymentRepository extends ReactiveMongoRepository<Payment,Strin
         Flux<Payment> findByTenantIdAndAccountId(String tenantId, String accountId);
 
         Flux<Payment> findByTenantIdAndCustomerId(String tenantId, String customerId);
+
+        Flux<Payment> findByAccountId(String accountId);
+        Mono<Payment> findByIdempotencyKey(String idempotencyKey);
+        Flux<Payment> findByStatus(Payment.PaymentStatus status);
 }

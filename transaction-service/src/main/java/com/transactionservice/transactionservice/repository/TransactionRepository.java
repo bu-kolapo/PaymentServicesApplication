@@ -12,4 +12,7 @@ public interface TransactionRepository extends ReactiveMongoRepository<Transacti
     Flux<Transaction> findByTenantIdAndPaymentId(String tenantId, String paymentId);
 
     Flux<Transaction> findByTenantIdAndAccountId(String tenantId, String accountId);
+    Flux<Transaction> findByAccountId(String accountId);
+    Flux<Transaction> findByPaymentId(String paymentId);
+    Flux<Transaction> findByFlaggedForReview(Boolean flagged);
 }
